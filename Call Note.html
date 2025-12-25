@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Call Note App</title>
+  <link rel="stylesheet" href="Call Note.css" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+</head>
+<body>
+
+  <div class="main-layout">
+    
+    <div class="side-controls left">
+      <button id="plus" class="control-btn"><span class="material-icons-round">add</span></button>
+      <button class="control-btn"><span class="material-icons-round">arrow_upward</span></button>
+      <button class="control-btn"><span class="material-icons-round">arrow_downward</span></button>
+    </div>
+
+    <div class="app-container">
+
+      <div id="card" class="card profile-card stacked">
+        <div class="profile-header">
+          <img src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&fit=crop&q=80&w=200" alt="Profile" />
+        </div>
+        
+        <h2>Fatima Uma</h2>
+        
+        <div class="info-row">
+          <span class="label">Home town</span>
+          <span class="value">Singapore</span>
+        </div>
+        <div class="info-row">
+          <span class="label">Bookings</span>
+          <span class="value">3 times</span>
+        </div>
+
+        <div class="action-buttons">
+          <button class="btn btn-black">
+            <span class="material-icons-round" style="font-size: 18px; margin-right:6px;">call</span> 
+            Call
+          </button>
+          <button class="btn btn-light">Message</button>
+        </div>
+      </div>
+
+      <form id="form" class="card form-card" style="margin-top: 50px;">
+        <h3>New Call</h3>
+
+        <div class="input-group">
+          <label>Image URL</label>
+          <input id="imageurl" type="text" placeholder="https://example.com/photo.jpg" required />
+        </div>
+
+        <div class="input-group">
+          <label>Full Name</label>
+          <input id="fullname" type="text" placeholder="Enter full name" required />
+        </div>
+
+        <div class="input-group">
+          <label>Home Town</label>
+          <input id="hometown" type="text" placeholder="Enter home town" required />
+        </div>
+
+        <div class="input-group">
+          <label>Purpose</label>
+          <input id="purpose" type="text" placeholder="e.g., Quick appointment note" required />
+        </div>
+
+<div class="input-group">
+  <label class="group-title">Category</label>
+
+  <div id="radio" class="radio-group">
+    <label class="radio-item">
+      <input type="radio" name="category" value="Emergency">
+      <span>Emergency</span>
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="category" value="Important">
+      <span>Important</span>
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="category" value="Urgent">
+      <span>Urgent</span>
+    </label>
+
+    <label class="radio-item">
+      <input type="radio" name="category" value="No Rush" >
+      <span>No Rush</span>
+    </label>
+  </div>
+</div>
+
+
+
+        <div class="form-actions-stack">
+          <button class="btn btn-black block">Create Note</button>
+          <button id="close" class="btn btn-red block">Close</button>
+        </div>
+      </form>
+
+    </div>
+
+    <div class="side-controls right">
+      <div class="color-dot black"></div>
+      <div class="color-dot purple"></div>
+      <div class="color-dot orange"></div>
+      <div class="color-dot teal"></div>
+    </div>
+
+  </div>
+
+  <script src="Call Note.js"></script>
+</body>
+</html>
+
